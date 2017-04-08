@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clientApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Time client</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<div class="row">
+			<div class="col offset-s3 s6">
+				<h1 class="center-align">Time client</h1>
+				<a class="center-align waves-effect waves-light btn-large" ng-click="getTime()"><i class="material-icons left">query_builder</i>Get time</a>
+				<div class="progress" ng-show="preloader">
+					<div class="indeterminate"></div>
+				</div>
+				<p ng-show="serverTime && ! preloader">Server time : {{serverTime}}</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
